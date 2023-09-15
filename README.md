@@ -14,6 +14,17 @@ Url se trouve dans : ![Capture d’écran 2023-09-12 à 13.40.25.png](Capture%20
 ```
 git clone url
 ```
-Les fichiers sera donc imorter dans dans votre machine .
+Les fichiers sera donc imorter dans dans votre machine.
 
-:jksdgf
+Nous pouvons égalament sauvgarder les fichier en utilisant les commandes :  
+
+```
+git add fichier 
+git commit -m"commentaire"
+git push
+```
+
+Nous pouvons également recuperer les modification qui ont ete fait avec la commande  : 
+```
+git pull
+```
