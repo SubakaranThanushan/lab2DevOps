@@ -23,3 +23,7 @@ git branch -d nom_de_la_branche
 # Pour supprimer une branche qui est deja sur le git
 
 git push origin --delete nom_de_la_branche
+
+# Pour push une branche
+
+git push --set-upstream origin nom_de_la_branche
