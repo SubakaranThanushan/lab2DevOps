@@ -27,13 +27,12 @@ jobs:
         with:
           node-version: 18.x
           cache: 'npm'
-        working-directory: userapi
       - run: npm ci
-        working-directory: userapi
+        
       - run: npm run build --if-present
-        working-directory: userapi
+       
       - run: npm test
-        working-directory: userapi
+        
     env:
       REDIS_HOST: localhost
       REDIS_PORT: 6379
