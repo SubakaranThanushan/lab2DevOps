@@ -100,7 +100,61 @@ Cette commande permet de relancer le provisonnement de la machine virtuelle.
 On l'utilise quand on fait des modifications notamment dans le "Vagrantfile", elle évite de rédemarrer la machine. 
 
 ## Partie 2
+# Lab 6
 
+## Installation 
+
+Installer Docker et se créer un compte
+Tester l'installation avec la commande 
+
+```bash 
+docker run hello-world
+```
+
+## Docker
+
+#### Build Docker 
+
+```bash
+docker build -t hello-world-docker .
+```
+
+"-t" siginfie tag, le nom que l'on veut donner au fichier ici, nous avons choisis "hello-world-docker"
+
+#### Run Docker 
+
+```bash
+docker run -p 12345:8080 -d hello-world-docker
+```
+
+-p : pour le port sur la machine locale 
+-d : arriere plan 
+
+#### Stop Docker 
+
+```bash 
+docker stop <CONTAINER_ID>
+```
+
+<CONTAINER_ID> : nom du container sur docker desktop
+
+```bash
+docker images
+```
+
+Cette commande permet de voir le nom des images disponible
+
+Pour se connecter a Docker depuis le terminal 
+
+```bash 
+docker login
+```
+
+## Docker Compose 
+
+```bash
+docker-compose up
+```
 
 
 
