@@ -1,0 +1,18 @@
+version: '3'
+services:
+  redis:
+    image: redis
+    volumes:
+      - redis-data:/data
+  web:
+  #Ajout du champs image
+    image: version2
+    ports:
+      - "5000:8080"
+    environment:
+    # Nom du service Redis dans le réseau Docker
+      - REDIS_HOST=redis  
+      - REDIS_PORT=6379  
+
+volumes:
+  redis-data:  

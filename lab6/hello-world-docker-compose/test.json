@@ -1,0 +1,38 @@
+{
+    "pages": [
+        {
+            "page": "http://cnam.fr/A",
+            "visites": [
+                {
+                    "utilisateur": {
+                        "id": 1,
+                        "email": "s@cnam.fr",
+                        "nom": "Serge"
+                    },
+                    "nbVisites": 2
+                },
+                {
+                    "utilisateur": {
+                        "id": 2,
+                        "email": "b@cnam.fr",
+                        "nom": "Benoit"
+                    },
+                    "nbVisites": 1
+                }
+            ]
+        },
+        {
+            "page": "http://cnam.fr/B",
+            "visites": [
+                {
+                    "utilisateur": {
+                        "id": 1,
+                        "email": "s@cnam.fr",
+                        "nom": "Serge"
+                    },
+                    "nbVisites": 1
+                }
+            ]
+        }
+    ]
+}
