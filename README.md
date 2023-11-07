@@ -282,7 +282,7 @@ Pour restaurer le service à l'image initiale de la Partie 2 :
 kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v1
 ```
 
-##Lab 8
+## Lab 8
 
 ## Partie 1 : emptyDir
 
