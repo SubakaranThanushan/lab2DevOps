@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-host-path
+  labels:
+    app: nginx-host-path
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-host-path
+  template:
+    metadata:
+      labels:
+        app: nginx-host-path
+    spec:
+      volumes:
+      - name: html-volume
+        hostPath:
+          # Le chemin est défini sur le système de fichiers du nœud
+          path: /mnt/hostPath/
+          # Cette ligne est optionnelle - elle spécifie le type du hostPath.
+          type: Directory
+      containers:
+      - name: nginx-container
+        image: nginx
+        ports:
+        - containerPort: 80
+          name: "http-server"
+        volumeMounts:
+        - name: html-volume
+          # Le chemin où le volume sera monté dans le conteneur
+          mountPath: /usr/share/nginx/html
