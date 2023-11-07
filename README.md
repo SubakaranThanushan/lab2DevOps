@@ -282,6 +282,65 @@ Pour restaurer le service à l'image initiale de la Partie 2 :
 kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v1
 ```
 
+##Lab 8
+
+## Partie 1 : emptyDir
+
+installation : 
+
+```bash
+winget install minikube
+```
+
+Modification du fichier deployment.yml :
+
+On ajoute les volumes au fichier 
+
+```c
+volumes:
+
+```
+
+```c
+volumeMounts:
+
+```
+
+Pour run le pod : 
+
+```bash
+kubectl apply -f lab/emptyDir/deployment.yml
+```
+
+Lister les pods : 
+
+```bash 
+kubectl get pods
+```
+
+Pour entrer dans le conteneur : 
+
+```bash 
+kubectl exec -it <POD_NAME> bash
+```
+
+Pour run : 
+
+```bash 
+curl localhost
+```
+
+## Partie 2 : hostPath
+
+Pour run le pod (hostPath): 
+
+```bash
+kubectl apply -f lab/hostPath/deployment.yml
+```
+
+On entre dans la VM avec ```minikube ssh```
+ 
+
 
 
 
